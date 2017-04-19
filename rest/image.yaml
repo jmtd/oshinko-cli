@@ -1,0 +1,21 @@
+name: redhat-radanalytics-1-tech-preview/oshinko-rest0.2-openshift
+version: 1.0
+release: dev
+from: rhel7:7.3-released
+workdir: /go/src/github.com/radanalyticsio/oshinko-cli/rest
+entrypoint:
+ - "/bin/sh"
+ - "-c"
+ - "/rest --host $OSHINKO_SERVER_HOST --port $OSHINKO_SERVER_PORT --scheme http"
+sources:
+ - url: https://github.com/radanalyticsio/oshinko-cli/releases/download/v0.2.2/oshinko-rest-server_v0.2.2_linux_amd64.tar.gz
+   md5sum: 45048eefa491ba9374fe5664ba815e8f
+scripts:
+    - package: install
+      exec: install
+envs:
+  information:
+    - name: OSHINKO_SERVER_HOST
+      value: "0.0.0.0"
+    - name: OSHINKO_SERVER_PORT
+      value: "8080"

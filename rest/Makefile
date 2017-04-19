@@ -2,6 +2,12 @@
 DOCKERFILE=../Dockerfile.rest
 DOCKERCONTEXT=..
 
+run_dogen:
+	docker run -i --rm -v $(shell pwd):/tmp/blah:z dogen:latest \
+		--verbose \
+		/tmp/blah/image.yaml /tmp/blah/build
+		#--repo-files-dir /tmp/blah/repos \
+
 build:
 	tools/build.sh build
 
