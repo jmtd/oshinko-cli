@@ -1,4 +1,4 @@
-name: redhat-radanalytics-1-tech-preview/oshinko-rest0.2-openshift
+name: redhat-radanalytics-1-tech-preview/radanalytics10-oshinko-rest-openshift
 version: 1.0
 release: dev
 from: rhel7:7.3-released
