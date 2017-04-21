@@ -3,6 +3,7 @@ DOCKERFILE=../Dockerfile.rest
 DOCKERCONTEXT=..
 
 run_dogen:
+	mkdir -p build
 	docker run -i --rm -v $(shell pwd):/tmp/blah:z dogen:latest \
 		--verbose \
 		/tmp/blah/image.yaml /tmp/blah/build
