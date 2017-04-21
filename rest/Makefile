@@ -4,7 +4,7 @@ DOCKERCONTEXT=..
 
 run_dogen:
 	mkdir -p build
-	docker run -i --rm -v $(shell pwd):/tmp/blah:z dogen:latest \
+	docker run -i --rm -v $(shell pwd):/tmp/blah:z jboss/dogen:latest \
 		--verbose \
 		/tmp/blah/image.yaml /tmp/blah/build
 		#--repo-files-dir /tmp/blah/repos \
